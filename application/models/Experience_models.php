@@ -26,7 +26,7 @@ class Experience_models extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where('pengalaman', ["id => $id"])->row();
+        return $this->db->get_where('pengalaman', ["id" => $id])->row_array();
     }
     public function save ()
     {

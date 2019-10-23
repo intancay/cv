@@ -4,9 +4,6 @@ class User_models extends CI_Model
     public function rules()
     {
         return[
-            ['field' => 'id',
-            'label' => 'id',
-            'rules' => 'required'],
             ['field' => 'uname',
             'label' => 'uname',
             'rules' => 'required'],
@@ -21,9 +18,9 @@ class User_models extends CI_Model
         return $hasil->result();
     }
 
-    public function getById()
+    public function getById($id)
     {
-        return $this->db->get_where('user', ["id => $id"])->row();
+        return $this->db->get_where('user', ["id" => $id])->row_array();
     }
     public function save ()
     {

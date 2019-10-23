@@ -20,7 +20,7 @@ class Ig_models extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where('ig', ["id => $id"])->row();
+        return $this->db->get_where('ig', ["id" => $id])->row_array();
     }
     public function save ()
     {

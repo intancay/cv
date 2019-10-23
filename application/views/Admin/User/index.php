@@ -50,7 +50,7 @@ $this->load->view("admin/partials/breadcrumbs.php")
             </thead>
 
             <tbody>
-            <?php foreach($user as $data) {?>
+            <?php foreach($user as $data) :?>
             <tr>
             <td><?php echo $data->id ?></td>
             <td><?php echo $data->uname ?></td>
@@ -61,10 +61,12 @@ $this->load->view("admin/partials/breadcrumbs.php")
               </a>
               </a>
               <a type="button" rel="tooltip" title="Hapus" class="btn btn-danger" onclick="deleteConfirm('<?php echo site_url('admin/user/delete/'.$data->id)?>')"> 
-                        <i class="fa fa-trash"></i> 
-                        </button>
-                        </a>
-                    </td>
+                <i class="fa fa-trash"></i> 
+                </button>
+                </a>
+            </td>
+            
+<?php endforeach; ?>
 
                     <!-- BUAT MODAL DELETE DIBAWAH SINI -->
                     <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-hdden="true" style="top:-100px|important;">
@@ -88,7 +90,6 @@ $this->load->view("admin/partials/breadcrumbs.php")
             </tr>
             </td>
             </tr>
-            <?php } ?>
             </tfoot>
           </table>
           </div>
@@ -112,14 +113,6 @@ $this->load->view("admin/partials/breadcrumbs.php")
             </div>
             <div class="modal-body">
               <form method="post" action="<?= base_url('admin/user/add')?>" method="post">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-grup">
-                    <label>Id</label>
-                    <input type="text" name="id" class="form-control" placeholder="Id .." value="">
-                  </div>
-                </div>
-              </div>
               <div class="row">
                   <div class="col-md-6">
                     <div class="form-grup">

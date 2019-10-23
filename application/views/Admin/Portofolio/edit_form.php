@@ -37,11 +37,11 @@ $this->load->view("admin/partials/breadcrumbs.php")
               <!-- form start -->
               <form role="form" action="<?php base_url('admin/portofolio/edit') ?>" method="post" enctype="multipart/form-data" >
                 <div class="card-body">
-                <input type="hidden" name="id" value="<?php echo $portofolio->id ?>" />
+                <input type="hidden" name="id" value="<?php echo $portofolio['id'] ?>" />
 
                 <div class="form-group">
                     <label for="foto">Foto</label>
-                    <input type="text" value="<?php echo $portofolio->foto ?>" class="form-control <?php echo form_error('foto') ? 'is-invalid':'' ?>" id="foto" placeholder="Foto" name="foto">
+                    <input type="text" value="<?php echo $portofolio['foto'] ?>" class="form-control <?php echo form_error('foto') ? 'is-invalid':'' ?>" id="foto" placeholder="Foto" name="foto">
                     <div class="invalid-feedback">
                         <?php echo form_error('foto') ?>
                     </div>

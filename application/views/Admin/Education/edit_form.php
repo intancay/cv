@@ -37,17 +37,17 @@
               <!-- form start -->
               <form role="form" action="<?php base_url('admin/education/edit') ?>" method="post" enctype="multipart/form-data" >
                 <div class="card-body">
-                <input type="hidden" name="id" value="<?php echo $pendidikan->id ?>" />
+                <input type="hidden" name="id" value="<?php echo $pendidikan['id'] ?>" />
                 <div class="form-group">
                     <label for="nama_pend">Nama Pendidikan</label>
-                    <input type="text" value="<?php echo $pendidikan->nama_pend ?>" class="form-control <?php echo form_error('nama_pend') ? 'is-invalid':'' ?>" id="nama_pend" placeholder="Nama Pendidikan" name="nama_pend">
+                    <input type="text" value="<?php echo $pendidikan['nama_pend'] ?>" class="form-control <?php echo form_error('nama_pend') ? 'is-invalid':'' ?>" id="nama_pend" placeholder="Nama Pendidikan" name="nama_pend">
                     <div class="invalid-feedback">
                         <?php echo form_error('nama_pend') ?>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="ket_pend">Keterangan Pendidikan</label>
-                    <input value="<?php echo $pendidikan->ket_pend ?>" type="text" class="form-control <?php echo form_error('ket_pend') ? 'is-invalid':'' ?>" id="ket_pend" placeholder="Keterangan Pendidikan" name="ket_pend">
+                    <input value="<?php echo $pendidikan['ket_pend'] ?>" type="text" class="form-control <?php echo form_error('ket_pend') ? 'is-invalid':'' ?>" id="ket_pend" placeholder="Keterangan Pendidikan" name="ket_pend">
                     <div class="invalid-feedback">
                         <?php echo form_error('ket_pend') ?>
                     </div>

@@ -45,7 +45,7 @@ class Experience extends CI_Controller {
 
 		}
 
-		$data["pengalaman"] = $pendidikan->getById($id);
+		$data["pengalaman"] = $pengalaman->getById($id);
 		if (!$data["pengalaman"]) show_404();
 
 		$this->load->view("admin/experience/edit_form", $data);

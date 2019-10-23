@@ -21,9 +21,9 @@ class Skill_models extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where('skill', ["id => $id"])->row();
+        return $this->db->get_where('skill', ["id" => $id])->row_array();
     }
-    public function save ()
+    public function save()
     {
         $post = $this->input->post();
         $this->id = uniqid();
@@ -34,7 +34,7 @@ class Skill_models extends CI_Model
     {
         $post = $this->input->post();
         $this->id = $post["id"];
-        $this->nama_skill = $post["nama_skil"];
+        $this->nama_skill = $post["nama_skill"];
         $this->db->update('skill', $this, array('id' => $post['id']));
     }
     public function delete($id)

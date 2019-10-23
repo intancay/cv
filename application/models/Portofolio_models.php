@@ -18,9 +18,9 @@ class Portofolio_models extends CI_Model
         return $hasil->result();
     }
 
-    public function getById()
+    public function getById($id )
     {
-        return $this->db->get_where('portofolio', ["id => $id"])->row();
+        return $this->db->get_where('portofolio', ["id" => $id])->row_array();
     }
     public function save ()
     {

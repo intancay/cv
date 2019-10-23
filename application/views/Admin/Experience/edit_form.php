@@ -37,24 +37,24 @@
               <!-- form start -->
               <form role="form" action="<?php base_url('admin/experience/edit') ?>" method="post" enctype="multipart/form-data" >
                 <div class="card-body">
-                <input type="hidden" name="id" value="<?php echo $pengalaman->id ?>" />
+                <input type="hidden" name="id" value="<?php echo $pengalaman['id'] ?>" />
                 <div class="form-group">
                     <label for="nama_peng">Nama Pengalaman</label>
-                    <input type="text" value="<?php echo $pengalaman->nama_peng ?>" class="form-control <?php echo form_error('nama_peng') ? 'is-invalid':'' ?>" id="nama_peng" placeholder="Nama Pengalaman" name="nama_peng">
+                    <input type="text" value="<?php echo $pengalaman['nama_peng'] ?>" class="form-control <?php echo form_error('nama_peng') ? 'is-invalid':'' ?>" id="nama_peng" placeholder="Nama Pengalaman" name="nama_peng">
                     <div class="invalid-feedback">
                         <?php echo form_error('nama_peng') ?>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="waktu-peng">Waktu Pengalaman</label>
-                    <input value="<?php echo $pengalaman->waktu_peng ?>" type="text" class="form-control <?php echo form_error('waktu_peng') ? 'is-invalid':'' ?>" id="waktu_peng" placeholder="Waktu Pengalaman" name="waktu-pengalaman">
+                    <input value="<?php echo $pengalaman['waktu_peng'] ?>" type="text" class="form-control <?php echo form_error('waktu_peng') ? 'is-invalid':'' ?>" id="waktu_peng" placeholder="Waktu Pengalaman" name="waktu_peng">
                     <div class="invalid-feedback">
                         <?php echo form_error('waktu-peng') ?>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="ket_peng">Keterangan Pengalaman</label>
-                    <input value="<?php echo $pengalaman->ket_peng ?>" type="text" class="form-control <?php echo form_error('ket_peng') ? 'is-invalid':'' ?>" id="ket_peng" placeholder="Keterangan Pengalaman" name="ket_peng">
+                    <input value="<?php echo $pengalaman['ket_peng'] ?>" type="text" class="form-control <?php echo form_error('ket_peng') ? 'is-invalid':'' ?>" id="ket_peng" placeholder="Keterangan Pengalaman" name="ket_peng">
                     <div class="invalid-feedback">
                         <?php echo form_error('ket_peng') ?>
                     </div>

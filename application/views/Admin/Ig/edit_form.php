@@ -37,11 +37,11 @@ $this->load->view("admin/partials/breadcrumbs.php")
               <!-- form start -->
               <form role="form" action="<?php base_url('admin/ig/edit') ?>" method="post" enctype="multipart/form-data" >
                 <div class="card-body">
-                <input type="hidden" name="id" value="<?php echo $ig->id ?>" />
+                <input type="hidden" name="id" value="<?php echo $ig['id'] ?>" />
 
                 <div class="form-group">
                     <label for="link">Link</label>
-                    <input type="text" value="<?php echo $ig->link ?>" class="form-control <?php echo form_error('link') ? 'is-invalid':'' ?>" id="link" placeholder="Link" name="link">
+                    <input type="text" value="<?php echo $ig['link'] ?>" class="form-control <?php echo form_error('link') ? 'is-invalid':'' ?>" id="link" placeholder="Link" name="link">
                     <div class="invalid-feedback">
                         <?php echo form_error('link') ?>
                     </div>

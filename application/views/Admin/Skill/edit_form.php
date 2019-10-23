@@ -37,11 +37,12 @@ $this->load->view("admin/partials/breadcrumbs.php")
               <!-- form start -->
               <form role="form" action="<?php base_url('admin/skill/edit') ?>" method="post" enctype="multipart/form-data" >
                 <div class="card-body">
-                <input type="hidden" name="id" value="<?php echo $skill->id ?>" />
+                  
+                <input type="hidden" name="id" value="<?php echo $skill['id'] ?>" />
 
                 <div class="form-group">
                     <label for="nama_skill">Nama Skill</label>
-                    <input type="text" value="<?php echo $skill->nama_skill ?>" class="form-control <?php echo form_error('nama_skill') ? 'is-invalid':'' ?>" id="nama_skill" placeholder="Nama Skill" name="nama_skill">
+                    <input type="text" value="<?php echo $skill['nama_skill'] ?>" class="form-control <?php echo form_error('nama_skill') ? 'is-invalid':'' ?>" id="nama_skill" placeholder="Nama Skill" name="nama_skill">
                     <div class="invalid-feedback">
                         <?php echo form_error('nama_skill') ?>
                     </div>

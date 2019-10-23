@@ -20,7 +20,7 @@ class Wa_models extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where('wa', ["id => $id"])->row();
+        return $this->db->get_where('wa', ["id" => $id])->row_array();
     }
     public function save ()
     {
